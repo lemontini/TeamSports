@@ -12,10 +12,9 @@ public class Court {
         this.maxPlayers = maxPlayers;
         this.court = new ArrayList<Player>();
 
-        id = Main.numCourts; // id = UUID.randomUUID().toString();
-        Main.numCourts++;
+        // id = Main.numCourts; // id = UUID.randomUUID().toString();
+        id++;
         System.out.println("Court " + id + " was created.");
-        // showPlayers();
     }
 
     public Court(int maxPlayers, Player... players) {
@@ -31,8 +30,8 @@ public class Court {
             }
         }
 
-        id = Main.numCourts; // id = UUID.randomUUID().toString();
-        Main.numCourts++;
+        // id = Main.numCourts; // id = UUID.randomUUID().toString();
+        id++;
         System.out.print("Court " + id + " was created with players " + getPlayers() + "\n");
     }
 
@@ -52,6 +51,13 @@ public class Court {
             }
         }
     }
+
+    // TODO: remove player from the Court and make him a free agent
+    // public void removePlayer(Player player) {
+    //     if (size > 0) {
+    //         if (court.contains(player)) System.out.println("Rastas " + player.getName());
+    //     }
+    // }
 
     public String getPlayers() {
         String players = "";
